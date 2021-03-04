@@ -46,7 +46,7 @@ public class EmployeesIndexServlet extends HttpServlet {
                 .setMaxResults(15)
                 .getResultList();
 
-        long employees_count = (long) em.createNamedQuery("getEmployeesCount", Long.class)
+        long employees_count = (long)em.createNamedQuery("getEmployeesCount", Long.class)
                 .getSingleResult();
 
         em.close();
