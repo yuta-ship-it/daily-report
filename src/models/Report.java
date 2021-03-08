@@ -44,8 +44,16 @@ public class Report {
     @Column(name = "content", nullable = false)
     private String content;
 
+    public Timestamp getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
     @Column(name = "created_at", nullable = false)
-    private Timestamp creted_at;
+    private Timestamp created_at;
 
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
@@ -88,14 +96,6 @@ public class Report {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public Timestamp getCreted_at() {
-        return creted_at;
-    }
-
-    public void setCreted_at(Timestamp creted_at) {
-        this.creted_at = creted_at;
     }
 
     public Timestamp getUpdated_at() {
